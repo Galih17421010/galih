@@ -10,9 +10,12 @@ Route::get('/', function () {
     return view('frontend.index');
 });
 
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('backend.pages.dashboard.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
