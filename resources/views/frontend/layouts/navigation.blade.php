@@ -89,9 +89,9 @@
         <!-- / Style Switcher-->
 
         <!-- navbar button: Start -->
-        <li>
+        {{-- <li>
           <a href="/" class="btn btn-primary px-2 px-sm-4 px-lg-2 px-xl-4" target="_blank"><span class="tf-icons ri-user-line me-md-1"></span><span class="d-none d-md-block">Login/Register</span></a>
-        </li>
+        </li> --}}
         <!-- navbar button: End -->
       </ul>
       <!-- Toolbar: End -->
