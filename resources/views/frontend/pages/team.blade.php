@@ -1,9 +1,9 @@
 <!-- Our great team: Start -->
 <section id="landingTeam" class="section-py landing-team">
     <div class="container bg-icon-right position-relative">
-      <img src={{asset("build/assets/img/bg-right-icon-light.png")}} alt="section icon" class="position-absolute top-0 end-0" data-speed="1" data-app-light-img="bg-right-icon-light.png" data-app-dark-img="bg-right-icon-dark.png" />
+      <img src={{asset("assets/img/bg-right-icon-light.png")}} alt="section icon" class="position-absolute top-0 end-0" data-speed="1" data-app-light-img="bg-right-icon-light.png" data-app-dark-img="bg-right-icon-dark.png" />
       <h6 class="text-center d-flex justify-content-center align-items-center mb-6">
-        <img src={{asset("build/assets/img/section-tilte-icon.png")}} alt="section title icon" class="me-2" height="19" />
+        <img src={{asset("assets/img/section-tilte-icon.png")}} alt="section title icon" class="me-2" height="19" />
         <span class="text-uppercase">our great team</span>
       </h6>
       <h5 class="text-center mb-2"><span class="h4 fw-bold">Supported</span> by Real People</h5>
@@ -12,7 +12,7 @@
         <div class="col-lg-3 col-sm-6">
           <div class="card card-hover-border-primary mt-4 mt-lg-0 shadow-none">
             <div class="bg-label-primary position-relative team-image-box">
-              <img src={{asset("build/assets/img/team-member-1.png")}} class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
+              <img src={{asset("assets/img/team-member-1.png")}} class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
             </div>
             <div class="card-body text-center">
               <h5 class="card-title mb-0">Sophie Gilbert</h5>
@@ -34,7 +34,7 @@
         <div class="col-lg-3 col-sm-6">
           <div class="card card-hover-border-danger mt-4 mt-lg-0 shadow-none">
             <div class="bg-label-danger position-relative team-image-box">
-              <img src={{asset("build/assets/img/team-member-2.png")}} class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
+              <img src={{asset("assets/img/team-member-2.png")}} class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
             </div>
             <div class="card-body text-center">
               <h5 class="card-title mb-0">Nannie Ford</h5>
@@ -56,7 +56,7 @@
         <div class="col-lg-3 col-sm-6">
           <div class="card card-hover-border-success mt-4 mt-lg-0 shadow-none">
             <div class="bg-label-success position-relative team-image-box">
-              <img src={{asset("build/assets/img/team-member-3.png")}} class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
+              <img src={{asset("assets/img/team-member-3.png")}} class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
             </div>
             <div class="card-body text-center">
               <h5 class="card-title mb-0">Chris Watkins</h5>
@@ -78,7 +78,7 @@
         <div class="col-lg-3 col-sm-6">
           <div class="card card-hover-border-info mt-4 mt-lg-0 shadow-none">
             <div class="bg-label-info position-relative team-image-box">
-              <img src={{asset("build/assets/img/team-member-4.png")}} class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
+              <img src={{asset("assets/img/team-member-4.png")}} class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl" alt="human image" />
             </div>
             <div class="card-body text-center">
               <h5 class="card-title mb-0">Paul Miles</h5>
@@ -105,9 +105,9 @@
   <!-- Pricing plans: Start -->
   <section id="landingPricing" class="section-py bg-body landing-pricing">
     <div class="container bg-icon-left position-relative">
-      <img src={{asset("build/assets/img/bg-left-icon-light.png")}} alt="section icon" class="position-absolute top-0 start-0" data-speed="1" data-app-light-img="bg-left-icon-light.png" data-app-dark-img="bg-left-icon-dark.png" />
+      <img src={{asset("assets/img/bg-left-icon-light.png")}} alt="section icon" class="position-absolute top-0 start-0" data-speed="1" data-app-light-img="bg-left-icon-light.png" data-app-dark-img="bg-left-icon-dark.png" />
       <h6 class="text-center d-flex justify-content-center align-items-center mb-6">
-        <img src={{asset("build/assets/img/section-tilte-icon.png")}} alt="section title icon" class="me-2" height="19" />
+        <img src={{asset("assets/img/section-tilte-icon.png")}} alt="section title icon" class="me-2" height="19" />
         <span class="text-uppercase">pricing plans</span>
       </h6>
       <h5 class="text-center mb-2"><span class="h4 fw-bold">Tailored pricing plans</span> designed for you</h5>
@@ -129,43 +129,43 @@
                   <p class="small mb-0 text-body">10% off for yearly subscription</p>
                 </div>
               </div>
-              <img src={{asset("build/assets/img/smiling-icon.png")}} alt="smiling icon" />
+              <img src={{asset("assets/img/smiling-icon.png")}} alt="smiling icon" />
             </div>
             <div class="card-body">
               <ul class="list-unstyled">
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Timeline
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Basic search
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Live chat widget
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Email marketing
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Custom Forms
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Traffic analytics
                   </h5>
                 </li>
@@ -198,43 +198,43 @@
                   <p class="small mb-0 text-body">10% off for yearly subscription</p>
                 </div>
               </div>
-              <img src={{asset("build/assets/img/smiling-icon.png")}} alt="smiling icon" />
+              <img src={{asset("assets/img/smiling-icon.png")}} alt="smiling icon" />
             </div>
             <div class="card-body">
               <ul class="list-unstyled">
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Everything in basic
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Timeline with database
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Advanced search
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Marketing automation
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Advanced chatbot
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Campaign management
                   </h5>
                 </li>
@@ -267,43 +267,43 @@
                   <p class="small mb-0 text-body">10% off for yearly subscription</p>
                 </div>
               </div>
-              <img src={{asset("build/assets/img/smiling-icon.png")}} alt="smiling icon" />
+              <img src={{asset("assets/img/smiling-icon.png")}} alt="smiling icon" />
             </div>
             <div class="card-body">
               <ul class="list-unstyled">
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Everything in premium
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Timeline with database
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Fuzzy search
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     A/B testing sanbox
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Custom permissions
                   </h5>
                 </li>
                 <li>
                   <h5 class="mb-3">
-                    <img src={{asset("build/assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
+                    <img src={{asset("assets/img/list-arrow-icon.png")}} alt="list arrow icon" class="me-2 pe-1 scaleX-n1-rtl" />
                     Social media automation
                   </h5>
                 </li>

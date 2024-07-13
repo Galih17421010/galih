@@ -1,67 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
 
-    {{-- <script>
-        (function (w, d, s, l, i) {
-          w[l] = w[l] || [];
-          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-          var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != "dataLayer" ? "&l=" + l : "";
-          j.async = true;
-          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-          f.parentNode.insertBefore(j, f);
-        })(window, document, "script", "dataLayer", "GTM-5DDHKGP");
-    </script> --}}
-    @include('frontend.layouts.head')
-    
-    <script type="module">
-        window.templateCustomizer = new TemplateCustomizer({
-        cssPath: '',
-        themesPath: '',
-        defaultStyle: "light",
-        displayCustomizer: "1",
-        pathResolver: function(path) {
-            var resolvedPaths = {
-            // Core stylesheets
-                        'core.scss': '/build/assets/css/core.css',
-                'core-dark.scss': '/build/assets/css/core-dark.css',
-            
-            // Themes
-                        'theme-default.scss': '/build/assets/css/theme-default.css',
-                'theme-default-dark.scss': '/build/assets/css/theme-default-dark.css',
-                        'theme-bordered.scss': '/build/assets/css/theme-bordered.css',
-                'theme-bordered-dark.scss': '/build/assets/css/theme-bordered-dark.css',
-                        'theme-semi-dark.scss': '/build/assets/css/theme-semi-dark.css',
-                'theme-semi-dark-dark.scss': '/build/assets/css/theme-semi-dark-dark.css',
-                    }
-            return resolvedPaths[path] || path;
-        },
-        'controls': ["rtl","style"],
+<!-- beautify ignore:start -->
 
-    });
-    </script> 
+<html lang="en" class="light-style layout-navbar-fixed layout-wide" dir="ltr" data-theme="theme-default" data-assets-path="assets/" data-template="front-pages" data-style="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
+    <title>Landing Page | Portfolio Galih</title>
+
+    <meta name="description" content="Start your development with a Dashboard for Bootstrap 5" />
+    <meta name="keywords" content="dashboard, material, material design, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5" />
+    <!-- Canonical SEO -->
+    <link rel="canonical" href="#" />
+
+    <!-- ? PROD Only: Google Tag Manager (Default ThemeSelection: GTM-5DDHKGP, PixInvent: GTM-5J3LMKC) -->
     <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];
-            w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;
-            f.parentNode.insertBefore(j,f);
-        })
-        (window,document,'script','dataLayer','GTM-5DDHKGP'); 
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-5DDHKGP");
     </script>
-   
-</head>
-<body>
+    <!-- End Google Tag Manager -->
+
+    @include('frontend.layouts.head')
+  </head>
+
+  <body>
     @include('frontend.layouts.js')
 
     @include('frontend.layouts.navigation')
+    <!-- Sections:Start -->
 
     <div data-bs-spy="scroll" class="scrollspy-example">
         @include('frontend.pages.home')
@@ -75,8 +50,12 @@
         @include('frontend.pages.contact')
     </div>
 
+    <!-- / Sections:End -->
+
     @include('frontend.layouts.footer')
 
-    @include('frontend.layouts.javascript')
-</body>
+   @include('frontend.layouts.javascript')
+  </body>
 </html>
+
+<!-- beautify ignore:end -->

@@ -30,9 +30,9 @@
   <!-- FAQ: Start -->
   <section id="landingFAQ" class="section-py bg-body landing-faq">
     <div class="container bg-icon-right">
-      <img src={{asset("build/assets/img/bg-right-icon-light.png")}} alt="section icon" class="position-absolute top-0 end-0" data-speed="1" data-app-light-img="bg-right-icon-light.png" data-app-dark-img="bg-right-icon-dark.png" />
+      <img src={{asset("assets/img/bg-right-icon-light.png")}} alt="section icon" class="position-absolute top-0 end-0" data-speed="1" data-app-light-img="bg-right-icon-light.png" data-app-dark-img="bg-right-icon-dark.png" />
       <h6 class="text-center d-flex justify-content-center align-items-center mb-6">
-        <img src="build/assets/img/section-tilte-icon.png" alt="section title icon" class="me-2" height="19" />
+        <img src="assets/img/section-tilte-icon.png" alt="section title icon" class="me-2" height="19" />
         <span class="text-uppercase">faq</span>
       </h6>
       <h5 class="text-center mb-2">Frequently asked<span class="h4 fw-bold"> questions</span></h5>
@@ -40,7 +40,7 @@
       <div class="row gy-5">
         <div class="col-lg-5">
           <div class="text-center">
-            <img src={{asset("build/assets/img/sitting-girl-with-laptop.png")}} alt="sitting girl with laptop" class="faq-image scaleX-n1-rtl" />
+            <img src={{asset("assets/img/sitting-girl-with-laptop.png")}} alt="sitting girl with laptop" class="faq-image scaleX-n1-rtl" />
           </div>
         </div>
         <div class="col-lg-7">
