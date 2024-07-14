@@ -8,7 +8,7 @@
           <i class="tf-icons ri-menu-fill ri-24px align-middle"></i>
         </button>
         <!-- Mobile menu toggle: End-->
-        <a href="#" class="app-brand-link">
+        <a href="/" class="app-brand-link">
           <span class="app-brand-logo demo">
             <span style="color: #9055fd">
               <svg width="30" height="24" viewBox="0 0 250 196" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +40,7 @@
         </button>
         <ul class="navbar-nav me-auto p-4 p-lg-0">
           <li class="nav-item">
-            <a class="nav-link fw-medium" aria-current="page" href="#landingHero">Home</a>
+            <a class="nav-link fw-medium" aria-current="page" href="#home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link fw-medium" href="#landingFeatures">Features</a>
@@ -55,7 +55,7 @@
             <a class="nav-link fw-medium text-nowrap" href="#landingContact">Contact us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link fw-medium" href="index.html" target="_blank">Admin</a>
+            <a class="nav-link fw-medium" href="/">Admin</a>
           </li>
         </ul>
       </div>

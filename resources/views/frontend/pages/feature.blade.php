@@ -1,5 +1,5 @@
 <!-- Useful features: Start -->
-<section id="landingFeatures" class="section-py landing-features">
+<section id="landingFeatures" class="section-py landing-features position-relative">
     <div class="container">
       <h6 class="text-center d-flex justify-content-center align-items-center mb-6">
         <img src={{asset("assets/img/section-tilte-icon.png")}} alt="section title icon" class="me-2" height="19" />
@@ -52,8 +52,8 @@
         </div>
       </div>
     </div>
-  </section>
-  <!-- Useful features: End -->
+</section>
+<!-- Useful features: End -->
 
     <!-- Real customers reviews: Start -->
     <section id="landingReviews" class="section-py bg-body landing-reviews">
@@ -410,5 +410,5 @@
             </div>
           </div>
         </div>
-      </section>
-      <!-- Real customers reviews: End -->
+    </section>
+    <!-- Real customers reviews: End -->
