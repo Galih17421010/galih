@@ -9,14 +9,7 @@
           </script>
            made with <span class="text-danger"><i class="tf-icons ri-heart-fill"></i></span> by <a href="/" target="_blank" class="footer-link">Portfolio Galih</a>
         </div>
-        <div class="d-none d-lg-inline-block">
-          <a href="#" class="footer-link me-4" target="_blank">License</a>
-          <a href="#" target="_blank" class="footer-link me-4">More Themes</a>
 
-          <a href="#" target="_blank" class="footer-link me-4">Documentation</a>
-
-          <a href="#" target="_blank" class="footer-link d-none d-sm-inline-block">Support</a>
-        </div>
       </div>
     </div>
 </footer>

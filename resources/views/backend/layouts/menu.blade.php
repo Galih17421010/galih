@@ -46,11 +46,6 @@
           <div data-i18n="Dashboards">Dashboard</div>
         </a>
       </li>
-
-      <!-- Apps & Pages -->
-      {{-- <li class="menu-header mt-7">
-        <span class="menu-header-text" data-i18n="Apps & Pages">Apps &amp; Pages</span>
-      </li> --}}
       <li class="menu-item">
         <a href="app-email.html" class="menu-link">
           <i class="menu-icon tf-icons ri-mail-open-line"></i>
@@ -250,7 +245,7 @@
         </a>
         <ul class="menu-sub">
           <li class="menu-item">
-            <a href="app-user-list.html" class="menu-link">
+            <a href="{{route('user.list')}}" class="menu-link">
               <div data-i18n="List">List</div>
             </a>
           </li>
@@ -261,28 +256,8 @@
             </a>
             <ul class="menu-sub">
               <li class="menu-item">
-                <a href="app-user-view-account.html" class="menu-link">
+                <a href="{{route('profile.edit')}}" class="menu-link">
                   <div data-i18n="Account">Account</div>
-                </a>
-              </li>
-              <li class="menu-item">
-                <a href="app-user-view-security.html" class="menu-link">
-                  <div data-i18n="Security">Security</div>
-                </a>
-              </li>
-              <li class="menu-item">
-                <a href="app-user-view-billing.html" class="menu-link">
-                  <div data-i18n="Billing & Plans">Billing & Plans</div>
-                </a>
-              </li>
-              <li class="menu-item">
-                <a href="app-user-view-notifications.html" class="menu-link">
-                  <div data-i18n="Notifications">Notifications</div>
-                </a>
-              </li>
-              <li class="menu-item">
-                <a href="app-user-view-connections.html" class="menu-link">
-                  <div data-i18n="Connections">Connections</div>
                 </a>
               </li>
             </ul>
