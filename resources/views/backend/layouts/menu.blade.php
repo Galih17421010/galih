@@ -40,31 +40,31 @@
 
     <ul class="menu-inner py-1">
       <!-- Dashboards -->
-      <li class="menu-item active open">
+      <li class="menu-item {{ request()->is('dashboard') ? 'active' : ''}}">
         <a href="{{ route('dashboard') }}" class="menu-link">
           <i class="menu-icon tf-icons ri-home-smile-line"></i>
           <div data-i18n="Dashboard">Dashboard</div>
         </a>
       </li>
-      <li class="menu-item active">
-        <a href="{{route('project.list')}}" class="menu-link">
+      <li class="menu-item {{ request()->is('projects') ? 'active' : ''}}">
+        <a href="{{route('projects.index')}}" class="menu-link">
           <i class="menu-icon tf-icons ri-mail-open-line"></i>
           <div data-i18n="Projects">Projects</div>
         </a>
       </li>
-      <li class="menu-item">
+      <li class="menu-item {{ request()->is('skills') ? 'active' : ''}}">
         <a href="{{route('skill.list')}}" class="menu-link">
           <i class="menu-icon tf-icons ri-wechat-line"></i>
           <div data-i18n="Skills">Skills</div>
         </a>
       </li>
-      <li class="menu-item">
+      <li class="menu-item {{ request()->is('experiences') ? 'active' : ''}}">
         <a href="{{route('experience.list')}}" class="menu-link">
           <i class="menu-icon tf-icons ri-calendar-line"></i>
           <div data-i18n="Experiences">Experiences</div>
         </a>
       </li>
-      <li class="menu-item">
+      <li class="menu-item {{ request()->is('educations') ? 'active' : ''}}">
         <a href="{{route('education.list')}}" class="menu-link">
           <i class="menu-icon tf-icons ri-drag-drop-line"></i>
           <div data-i18n="Educations">Educations</div>

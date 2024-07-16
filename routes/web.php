@@ -30,8 +30,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/users', [UserController::class, 'index'])->name('user.list');
 
 
-    Route::get('/projects', [ProjectController::class, 'index'])->name('project.list');
-    Route::get('/projects-data', [ProjectController::class, 'getdata'])->name('project.data');
+    // Route::get('/projects', [ProjectController::class, 'index'])->name('project.list');
+    // Route::get('/projects-data', [ProjectController::class, 'getdata'])->name('project.data');
+    Route::resource('projects', ProjectController::class);
 
     Route::get('/skills', [SkillController::class, 'index'])->name('skill.list');
 

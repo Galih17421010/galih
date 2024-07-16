@@ -92,17 +92,17 @@
   <div class="card">
     <div class="card-header border-bottom">
       <h6 class="card-title mb-0 text-center">Data Projects</h6>
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addNewProject">Add Project</button>
+      {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addNewProject">Add Project</button> --}}
+      <a href="javascript:void(0)" class="btn btn-primary" id="createProject">Add Project</a>
     </div>
     <div class="card-datatable table-responsive">
       <table class="datatables-project table" id="table-project">
         <thead>
           <tr>
             <th></th>
-            <th></th>
             <th>Title</th>
             <th>Description</th>
-            <th>Projects_url</th>
+            <th>Projects url</th>
             <th>Start Date</th>
             <th>End Date</th>
             <th>Actions</th>
@@ -113,16 +113,17 @@
   </div>
 
   <!-- Add New Project Modal -->
-<div class="modal fade" id="addNewProject" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="addNewProject" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-simple modal-add-new-address">
       <div class="modal-content">
         <div class="modal-body p-0">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           <div class="text-center mb-6">
-            <h4 class="address-title mb-2">Add New Project</h4>
-            <p class="address-subtitle">Add new project for Portfolio</p>
+            <h4 class="address-title mb-2" id="judulModal"></h4>
+            <p class="address-subtitle" id="deskripsiModal"></p>
           </div>
-          <form id="addNewProject" class="row g-5" onsubmit="return false">
+          <form id="projectForm" class="row g-5" name="projectForm">
+            <input type="hidden" name="id" id="id"><input type="hidden" name="user_id" id="user_id" value="1"> @csrf
             <div class="col-12">
               <div class="form-floating form-floating-outline">
                 <input type="text" id="title" name="title" class="form-control" required />
@@ -131,8 +132,8 @@
             </div>
             <div class="col-12">
               <div class="form-floating form-floating-outline">
-                <input type="text" id="url_project" name="url_project" class="form-control" required />
-                <label for="url_project">URL Project</label>
+                <input type="text" id="project_url" name="project_url" class="form-control" required />
+                <label for="project_url">Project URL</label>
               </div>
             </div>
             <div class="col-12 col-md-6">
@@ -155,7 +156,7 @@
             </div>
 
             <div class="col-12 text-center">
-              <button type="submit" class="btn btn-primary me-3">Submit</button>
+              <button type="submit" class="btn btn-primary me-3" id="simpan" value="create">Submit</button>
               <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
             </div>
           </form>
@@ -175,13 +176,12 @@
           }
         });
         $(document).ready(function(){
-            var table = $('#table-project').DataTable({
+            let table = $('#table-project').DataTable({
                 processing: true,
                 serverSide: true,
-                ajax: "{{ route('project.data') }}",
+                ajax: "{{ route('projects.index') }}",
                 columns: [
                     {data: 'id', name: 'id'},
-                    {data: 'user_id', name: 'user_id'},
                     {data: 'title', name: 'title'},
                     {data: 'description', name: 'description'},
                     {data: 'project_url', name: 'project_url'},
@@ -191,8 +191,76 @@
                 ]
             });
 
-        });
+            $('#createProject').click(function () {
+                $('#simpan').val("create-project");
+                $('#id').val('');
+                $('#projectForm').trigger("reset");
+                $('#judulModal').html("Create New Project ");
+                $('#deskripsiModal').html("Add new project for Portfolio ");
+                $('#addNewProject').modal('show');
+            });
 
+            $('body').on('click', '.editBtn', function () {
+                var id = $(this).data('id');
+                $.get("{{ route('projects.index') }}" +'/' + id +'/edit', function (data) {
+                    $('#judulModal').html("Edit Project");
+                    $('#deskripsiModal').html("Edit project for Portfolio ");
+                    $('#simpan').val("edit-project");
+                    $('#addNewProject').modal('show');
+                    $('#id').val(data.id);
+                    $('#user_id').val(data.user_id);
+                    $('#title').val(data.title);
+                    $('#description').val(data.description);
+                    $('#project_url').val(data.project_url);
+                    $('#start_date').val(data.start_date);
+                    $('#end_date').val(data.end_date);
+                })
+            });
+
+
+            $('#projectForm').submit(function(e) {
+            e.preventDefault();
+            let formData = new FormData(this);
+                $('#simpan').html('Sending...');
+                    $.ajax({
+                        type:'POST',
+                        url: "{{ route('projects.store') }}",
+                        data: formData,
+                        contentType: false,
+                        processData: false,
+                        success: (response) => {
+                            $('#simpan').html('Submit');
+                            $('#projectForm').trigger("reset");
+                            $('#addNewProject').modal('hide');
+                            table.draw();
+                        },
+                        error: function(response){
+                            $('#simpan').html('Submit');
+                            $('#projectForm').find(".print-error-msg").find("ul").html('');
+                            $('#projectForm').find(".print-error-msg").css('display','block');
+                            $.each( response.responseJSON.errors, function( key, value ) {
+                                $('#projectForm').find(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+                            });
+                        }
+                });
+
+            });
+
+            $('body').on('click', '.deleteBtn', function () {
+                var id = $(this).data("id");
+                confirm("Are You sure want to delete?");
+                $.ajax({
+                    type: "DELETE",
+                    url: "{{ route('projects.store') }}"+'/'+id,
+                    success: function (data) {
+                        table.draw();
+                    },
+                    error: function (data) {
+                        console.log('Error:', data);
+                    }
+                });
+            });
+        });
     });
 </script>
 @endsection
