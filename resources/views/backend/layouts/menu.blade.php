@@ -43,31 +43,31 @@
       <li class="menu-item active open">
         <a href="{{ route('dashboard') }}" class="menu-link">
           <i class="menu-icon tf-icons ri-home-smile-line"></i>
-          <div data-i18n="Dashboards">Dashboard</div>
+          <div data-i18n="Dashboard">Dashboard</div>
         </a>
       </li>
       <li class="menu-item">
-        <a href="app-email.html" class="menu-link">
+        <a href="{{route('project.list')}}" class="menu-link">
           <i class="menu-icon tf-icons ri-mail-open-line"></i>
-          <div data-i18n="Email">Email</div>
+          <div data-i18n="Projects">Projects</div>
         </a>
       </li>
       <li class="menu-item">
-        <a href="app-chat.html" class="menu-link">
+        <a href="{{route('skill.list')}}" class="menu-link">
           <i class="menu-icon tf-icons ri-wechat-line"></i>
-          <div data-i18n="Chat">Chat</div>
+          <div data-i18n="Skills">Skills</div>
         </a>
       </li>
       <li class="menu-item">
-        <a href="app-calendar.html" class="menu-link">
+        <a href="{{route('experience.list')}}" class="menu-link">
           <i class="menu-icon tf-icons ri-calendar-line"></i>
-          <div data-i18n="Calendar">Calendar</div>
+          <div data-i18n="Experiences">Experiences</div>
         </a>
       </li>
       <li class="menu-item">
-        <a href="app-kanban.html" class="menu-link">
+        <a href="{{route('education.list')}}" class="menu-link">
           <i class="menu-icon tf-icons ri-drag-drop-line"></i>
-          <div data-i18n="Kanban">Kanban</div>
+          <div data-i18n="Educations">Educations</div>
         </a>
       </li>
       <!-- e-commerce-app menu start -->

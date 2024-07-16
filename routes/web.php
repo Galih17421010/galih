@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\EducationController;
+use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SkillController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +28,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/users', [UserController::class, 'index'])->name('user.list');
+
+
+    Route::get('/projects', [ProjectController::class, 'index'])->name('project.list');
+
+
+    Route::get('/skills', [SkillController::class, 'index'])->name('skill.list');
+
+
+    Route::get('/experiences', [ExperienceController::class, 'index'])->name('experience.list');
+
+
+    Route::get('/educations', [EducationController::class, 'index'])->name('education.list');
 });
 
 require __DIR__.'/auth.php';

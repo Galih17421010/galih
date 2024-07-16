@@ -1,6 +1,6 @@
 @extends('backend.index')
-@section('title','Users')
+@section('title','Skills')
 
 @section('content')
-    user page
+    skill page
 @endsection

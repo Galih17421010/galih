@@ -1,5 +1,5 @@
 <!-- Footer: Start -->
-<footer class="landing-footer">
+<footer class="landing-footer fixed-bottom">
     <div class="footer-bottom py-5">
       <div class="container d-flex flex-wrap justify-content-between flex-md-row flex-column text-center text-md-start">
         <div class="mb-2 mb-md-0">
