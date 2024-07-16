@@ -1,6 +1,6 @@
     <!-- Core JS -->
     <!-- build:js assets/core.js -->
-    <script src={{asset("assets/js/jquery.js")}}></script>
+    <script src={{asset("assets/js/jquery.min.js")}}></script>
     <script src={{asset("assets/js/popper.js")}}></script>
     <script src={{asset("assets/js/bootstrap.js")}}></script>
     <script src={{asset("assets/js/node-waves.js")}}></script>
@@ -14,6 +14,8 @@
 
     <!-- Vendors JS -->
     <script src={{asset("assets/js/apexcharts.js")}}></script>
+    <script src={{asset("assets/js/datatables-bootstrap5.js")}}></script>
+    <script src={{asset("assets/js/select2.js")}}></script>
 
     <!-- Main JS -->
     <script src={{asset("assets/js/main.js")}}></script>

@@ -22,13 +22,16 @@
 <link rel="stylesheet" href={{asset("assets/css/perfect-scrollbar.css")}} />
 <link rel="stylesheet" href={{asset("assets/css/typeahead.css")}} />
 <link rel="stylesheet" href={{asset("assets/css/apex-charts.css")}} />
+<link rel="stylesheet" href={{asset("assets/css/datatables.bootstrap5.css")}} />
+<link rel="stylesheet" href={{asset("assets/css/responsive.bootstrap5.css")}} />
+<link rel="stylesheet" href={{asset("assets/css/buttons.bootstrap5.css")}} />
+<link rel="stylesheet" href={{asset("assets/css/datatables.checkboxes.css")}} />
+<link rel="stylesheet" href={{asset("assets/css/select2.css")}} />
 
 <!-- Page CSS -->
 
 <!-- Helpers -->
 <script src={{asset("assets/js/helpers.js")}}></script>
-<!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-<!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
 <script src={{asset("assets/js/template-customizer.js")}}></script>
-<!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
 <script src={{asset("assets/js/config.js")}}></script>
+<script src={{asset("assets/js/jquery.min.js")}}></script>

@@ -46,7 +46,7 @@
           <div data-i18n="Dashboard">Dashboard</div>
         </a>
       </li>
-      <li class="menu-item">
+      <li class="menu-item active">
         <a href="{{route('project.list')}}" class="menu-link">
           <i class="menu-icon tf-icons ri-mail-open-line"></i>
           <div data-i18n="Projects">Projects</div>

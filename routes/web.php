@@ -31,7 +31,7 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get('/projects', [ProjectController::class, 'index'])->name('project.list');
-
+    Route::get('/projects-data', [ProjectController::class, 'getdata'])->name('project.data');
 
     Route::get('/skills', [SkillController::class, 'index'])->name('skill.list');
 

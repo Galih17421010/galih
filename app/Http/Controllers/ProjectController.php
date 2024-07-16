@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 
 class ProjectController extends Controller
 {
@@ -12,6 +13,16 @@ class ProjectController extends Controller
     {
         $projects = Project::all();
         return view('backend.pages.projects.index', compact('projects'));
+    }
+
+    public function getdata(){
+        return DataTables::of(Project::all())
+                        ->addColumn('action', function($p){
+                            $btn = '';
+                            return $btn;
+                        })
+                        ->rawColumns(['action'])
+                        ->make(true);
     }
 
     public function create()
