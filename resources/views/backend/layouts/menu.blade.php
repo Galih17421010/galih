@@ -59,13 +59,13 @@
         </a>
       </li>
       <li class="menu-item {{ request()->is('experiences') ? 'active' : ''}}">
-        <a href="{{route('experience.list')}}" class="menu-link">
+        <a href="{{route('experiences.index')}}" class="menu-link">
           <i class="menu-icon tf-icons ri-calendar-line"></i>
           <div data-i18n="Experiences">Experiences</div>
         </a>
       </li>
       <li class="menu-item {{ request()->is('educations') ? 'active' : ''}}">
-        <a href="{{route('education.list')}}" class="menu-link">
+        <a href="{{route('educations.index')}}" class="menu-link">
           <i class="menu-icon tf-icons ri-drag-drop-line"></i>
           <div data-i18n="Educations">Educations</div>
         </a>

@@ -3,68 +3,55 @@
 namespace App\Http\Controllers;
 
 use App\Models\Experience;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 
 class ExperienceController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $experiences = Experience::all();
-        return view('backend.pages.experiences.index', compact('experiences'));
+        if ($request->ajax()) {
+            return DataTables::of(Experience::all())
+                ->addColumn('action', function($p){
+                $btn = '<a href="javascript:void(0)" data-toggle="tooltip" data-id="'.$p->id.'" title="Edit" class="btn btn-icon btn-text-info rounded-pill waves-effect editBtn">
+                            <i class="ri-edit-box-line"></i>
+                        </a>
+                        <a href="javascript:void(0)" data-toggle="tooltip" data-id="'.$p->id.'" title="Delete" class="btn btn-icon btn-text-danger rounded-pill waves-effect deleteBtn">
+                            <i class="ri-delete-bin-7-line"></i>
+                        </a>';
+                return $btn;
+            })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+        return view('backend.pages.experiences.index');
     }
 
-    public function create()
+    public function store(Request $request): JsonResponse
     {
-        return view('backend.pages.experiences.create');
-    }
-
-    public function store(Request $request)
-    {
-        $request->validate([
-            'company' => 'required',
-            'role' => 'required',
-            'description' => 'required',
-            'start_date' => 'required|date',
-            'end_date' => 'required|date',
+        Experience::updateOrCreate(['id'=> $request->id],[
+            'user_id' => $request->user_id,
+            'company' => $request->company,
+            'role' => $request->role,
+            'description' => $request->description,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date
         ]);
 
-        Experience::create($request->all());
-
-        return redirect()->route('backend.pages.experiences.index')
-                         ->with('success', 'Experience created successfully.');
+        return response()->json(['success' => true, 'message' => 'Save Experience Successfully.']);
     }
 
-    public function show(Experience $experience)
+    public function edit($id): JsonResponse
     {
-        return view('backend.pages.experiences.show', compact('experience'));
+        $experience = Experience::find($id);
+        return response()->json($experience);
     }
 
-    public function edit(Experience $experience)
+    public function destroy($id): JsonResponse
     {
-        return view('backend.pages.experiences.edit', compact('experience'));
-    }
+        Experience::find($id)->delete();
 
-    public function update(Request $request, Experience $experience)
-    {
-        $request->validate([
-            'company' => 'required',
-            'role' => 'required',
-            'description' => 'required',
-            'start_date' => 'required|date',
-            'end_date' => 'required|date',
-        ]);
-
-        $experience->update($request->all());
-
-        return redirect()->route('backend.pages.experiences.index')
-                         ->with('success', 'Experience updated successfully.');
-    }
-
-    public function destroy(Experience $experience)
-    {
-        $experience->delete();
-
-        return redirect()->route('backend.pages.experiences.index')
-                         ->with('success', 'Experience deleted successfully.');
+        return response()->json(['success'=> true, 'message' => 'Project deleted successfully.']);
     }
 }

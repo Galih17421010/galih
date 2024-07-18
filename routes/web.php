@@ -8,15 +8,11 @@ use App\Http\Controllers\SkillController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
 Route::get('/', function () {
     return view('frontend.index');
 });
 
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
 Route::get('/dashboard', function () {
     return view('backend.pages.dashboard.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -33,10 +29,9 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('skills', SkillController::class);
 
-    Route::get('/experiences', [ExperienceController::class, 'index'])->name('experience.list');
+    Route::resource('experiences', ExperienceController::class);
 
-
-    Route::get('/educations', [EducationController::class, 'index'])->name('education.list');
+    Route::resource('educations', EducationController::class);
 });
 
 require __DIR__.'/auth.php';
