@@ -53,7 +53,7 @@
         </a>
       </li>
       <li class="menu-item {{ request()->is('skills') ? 'active' : ''}}">
-        <a href="{{route('skill.list')}}" class="menu-link">
+        <a href="{{route('skills.index')}}" class="menu-link">
           <i class="menu-icon tf-icons ri-wechat-line"></i>
           <div data-i18n="Skills">Skills</div>
         </a>

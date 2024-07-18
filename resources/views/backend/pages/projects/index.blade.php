@@ -88,7 +88,8 @@
       </div>
     </div>
   </div>
-  <!-- Users List Table -->
+
+  <!-- Project List Table -->
   <div class="card">
     <div class="card-header border-bottom">
         <h6 class="card-title mb-0 text-center">Data Projects</h6>
@@ -111,7 +112,7 @@
     </div>
   </div>
 
-  <!-- Add New Project Modal -->
+  <!-- Add Project Modal -->
 <div class="modal fade" id="addNewProject" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-simple modal-add-new-address">
       <div class="modal-content">
@@ -163,7 +164,7 @@
       </div>
     </div>
   </div>
-  <!--/ Add New Project Modal -->
+  <!--/ Add Project Modal -->
 @endsection
 
 @section('script')
@@ -268,8 +269,8 @@
                             data: {id},
                             success: function(response) {
                                 Swal.fire({
-                                title: "Terhapus!",
-                                text: "Data pengajuan anda berhasil dihapus.",
+                                title: "Deleted!",
+                                text: `${response.message}`,
                                 icon: "success"
                                 });
                                 table.draw();

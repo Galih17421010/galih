@@ -43,13 +43,6 @@ class ProjectController extends Controller
         return response()->json(['success' => true, 'message' => 'Save Project Successfully.']);
     }
 
-
-    public function show(Project $project)
-    {
-         return view('backend.pages.projects.show', compact('project'));
-    }
-
-
     public function edit($id): JsonResponse
     {
         $project = Project::find($id);
@@ -60,6 +53,6 @@ class ProjectController extends Controller
     {
         Project::find($id)->delete();
 
-        return response()->json(['success'=>'Project deleted successfully.']);
+        return response()->json(['success'=> true, 'message' => 'Project deleted successfully.']);
     }
 }
