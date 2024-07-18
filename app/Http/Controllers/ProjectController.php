@@ -40,7 +40,7 @@ class ProjectController extends Controller
             'end_date' => $request->end_date
         ]);
 
-        return response()->json(['success'=> 'Project created successfully.']);
+        return response()->json(['success' => true, 'message' => 'Save Project Successfully.']);
     }
 
 
@@ -56,23 +56,7 @@ class ProjectController extends Controller
         return response()->json($project);
     }
 
-
-    public function update(Request $request, Project $project)
-    {
-        $request->validate([
-            'title' => 'required',
-            'description' => 'required',
-            'project_url' => 'required|url',
-        ]);
-
-        $project->update($request->all());
-
-        return redirect()->route('backend.pages.projects.index')
-                         ->with('success', 'Project updated successfully.');
-    }
-
-
-    public function destroy($id)
+    public function destroy($id): JsonResponse
     {
         Project::find($id)->delete();
 

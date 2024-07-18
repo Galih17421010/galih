@@ -35,3 +35,5 @@
 <script src={{asset("assets/js/template-customizer.js")}}></script>
 <script src={{asset("assets/js/config.js")}}></script>
 <script src={{asset("assets/js/jquery.min.js")}}></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

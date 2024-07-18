@@ -91,9 +91,8 @@
   <!-- Users List Table -->
   <div class="card">
     <div class="card-header border-bottom">
-      <h6 class="card-title mb-0 text-center">Data Projects</h6>
-      {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addNewProject">Add Project</button> --}}
-      <a href="javascript:void(0)" class="btn btn-primary" id="createProject">Add Project</a>
+        <h6 class="card-title mb-0 text-center">Data Projects</h6>
+        <a href="javascript:void(0)" class="btn btn-primary" id="createProject">Add Project</a>
     </div>
     <div class="card-datatable table-responsive">
       <table class="datatables-project table" id="table-project">
@@ -232,6 +231,11 @@
                             $('#simpan').html('Submit');
                             $('#projectForm').trigger("reset");
                             $('#addNewProject').modal('hide');
+                            Swal.fire({
+                                title: "Success",
+                                text: `${response.message}`,
+                                icon: "success"
+                            });
                             table.draw();
                         },
                         error: function(response){
@@ -248,15 +252,29 @@
 
             $('body').on('click', '.deleteBtn', function () {
                 var id = $(this).data("id");
-                confirm("Are You sure want to delete?");
-                $.ajax({
-                    type: "DELETE",
-                    url: "{{ route('projects.store') }}"+'/'+id,
-                    success: function (data) {
-                        table.draw();
-                    },
-                    error: function (data) {
-                        console.log('Error:', data);
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    confirmButtonText: "Yes, deleted",
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            url: "{{route('projects.store')}}"+"/"+id,
+                            type: "DELETE",
+                            data: {id},
+                            success: function(response) {
+                                Swal.fire({
+                                title: "Terhapus!",
+                                text: "Data pengajuan anda berhasil dihapus.",
+                                icon: "success"
+                                });
+                                table.draw();
+                            }
+                        });
                     }
                 });
             });
