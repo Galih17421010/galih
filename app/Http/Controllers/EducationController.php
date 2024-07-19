@@ -3,69 +3,56 @@
 namespace App\Http\Controllers;
 
 use App\Models\Education;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 
 class EducationController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $educations = Education::all();
-        return view('backend.pages.educations.index', compact('educations'));
-    }
-
-    public function create()
-    {
-        return view('backend.pages.educations.create');
+        if ($request->ajax()) {
+            return DataTables::of(Education::all())
+                ->addColumn('action', function($p){
+                $btn = '<a href="javascript:void(0)" data-toggle="tooltip" data-id="'.$p->id.'" title="Edit" class="btn btn-icon btn-text-info rounded-pill waves-effect editBtn">
+                            <i class="ri-edit-box-line"></i>
+                        </a>
+                        <a href="javascript:void(0)" data-toggle="tooltip" data-id="'.$p->id.'" title="Delete" class="btn btn-icon btn-text-danger rounded-pill waves-effect deleteBtn">
+                            <i class="ri-delete-bin-7-line"></i>
+                        </a>';
+                return $btn;
+            })
+                ->rawColumns(['action'])
+                ->make(true);
+        }
+        return view('backend.pages.educations.index');
     }
 
     public function store(Request $request)
     {
-        $request->validate([
-            'institution' => 'required',
-            'degree' => 'required',
-            'field_of_study' => 'required',
-            'start_date' => 'required|date',
-            'end_date' => 'required|date',
+        Education::updateOrCreate(['id'=> $request->id],[
+            'user_id' => $request->user_id,
+            'institution' => $request->institution,
+            'degree' => $request->degree,
+            'field_of_study' => $request->field_of_study,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date
         ]);
 
-        Education::create($request->all());
-
-        return redirect()->route('backend.pages.educations.index')
-                         ->with('success', 'Education created successfully.');
+        return response()->json(['success' => true, 'message' => 'Save Education Successfully.']);
     }
 
-    public function show(Education $education)
+    public function edit($id): JsonResponse
     {
-        return view('backend.pages.educations.show', compact('education'));
+        $experience = Education::find($id);
+        return response()->json($experience);
     }
 
-    public function edit(Education $education)
+    public function destroy($id): JsonResponse
     {
-        return view('backend.pages.educations.edit', compact('education'));
-    }
+        Education::find($id)->delete();
 
-    public function update(Request $request, Education $education)
-    {
-        $request->validate([
-            'institution' => 'required',
-            'degree' => 'required',
-            'field_of_study' => 'required',
-            'start_date' => 'required|date',
-            'end_date' => 'required|date',
-        ]);
-
-        $education->update($request->all());
-
-        return redirect()->route('backend.pages.educations.index')
-                         ->with('success', 'Education updated successfully.');
-    }
-
-    public function destroy(Education $education)
-    {
-        $education->delete();
-
-        return redirect()->route('backend.pages.educations.index')
-                         ->with('success', 'Education deleted successfully.');
+        return response()->json(['success'=> true, 'message' => 'Education deleted successfully.']);
     }
 }
 

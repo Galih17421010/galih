@@ -77,7 +77,7 @@
       </div>
     </div>
   </div>
-  <!--/ Add Project Modal -->
+  <!--/ Add Experience Modal -->
 @endsection
 @section('script')
 <script type="text/javascript">
@@ -183,7 +183,7 @@
                             data: {id},
                             success: function(response) {
                                 Swal.fire({
-                                title: "Terhapus!",
+                                title: "Deleted!",
                                 text: `${response.message}`,
                                 icon: "success"
                                 });
