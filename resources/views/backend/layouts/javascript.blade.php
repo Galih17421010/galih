@@ -16,9 +16,7 @@
     <script src={{asset("assets/js/apexcharts.js")}}></script>
     <script src={{asset("assets/js/datatables-bootstrap5.js")}}></script>
     <script src={{asset("assets/js/select2.js")}}></script>
+    <script src={{asset("assets/js/sweetalert2.js")}}></script>
 
     <!-- Main JS -->
     <script src={{asset("assets/js/main.js")}}></script>
-
-    <!-- Page JS -->
-    {{-- <script src={{asset("assets/js/dashboards-analytics.js")}}></script> --}}

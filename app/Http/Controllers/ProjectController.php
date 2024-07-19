@@ -40,7 +40,7 @@ class ProjectController extends Controller
             'end_date' => $request->end_date
         ]);
 
-        return response()->json(['success' => true, 'message' => 'Save Project Successfully.']);
+        return response()->json(['success' => true, 'message' => 'Your Project has been saved']);
     }
 
     public function edit($id): JsonResponse

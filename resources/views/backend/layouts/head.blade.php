@@ -27,6 +27,7 @@
 <link rel="stylesheet" href={{asset("assets/css/buttons.bootstrap5.css")}} />
 <link rel="stylesheet" href={{asset("assets/css/datatables.checkboxes.css")}} />
 <link rel="stylesheet" href={{asset("assets/css/select2.css")}} />
+<link rel="stylesheet" href={{asset("assets/css/sweetalert2.css")}} />
 
 <!-- Page CSS -->
 
@@ -36,4 +37,3 @@
 <script src={{asset("assets/js/config.js")}}></script>
 <script src={{asset("assets/js/jquery.min.js")}}></script>
 
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

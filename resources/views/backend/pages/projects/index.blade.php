@@ -235,7 +235,9 @@
                             Swal.fire({
                                 title: "Success",
                                 text: `${response.message}`,
-                                icon: "success"
+                                icon: "success",
+                                customClass: { confirmButton: "btn btn-success" },
+                                buttonsStyling: !1,
                             });
                             table.draw();
                         },
@@ -258,9 +260,11 @@
                     text: "You won't be able to revert this!",
                     icon: "warning",
                     showCancelButton: true,
-                    confirmButtonColor: "#3085d6",
-                    cancelButtonColor: "#d33",
                     confirmButtonText: "Yes, deleted",
+                    customClass: {
+                        confirmButton: "btn btn-primary me-3",
+                        cancelButton: "btn btn-label-secondary",
+                    }
                 }).then((result) => {
                     if (result.isConfirmed) {
                         $.ajax({
@@ -269,9 +273,10 @@
                             data: {id},
                             success: function(response) {
                                 Swal.fire({
-                                title: "Deleted!",
-                                text: `${response.message}`,
-                                icon: "success"
+                                    title: "Deleted!",
+                                    text: `${response.message}`,
+                                    icon: "success",
+                                    customClass: { confirmButton: "btn btn-success" },
                                 });
                                 table.draw();
                             }

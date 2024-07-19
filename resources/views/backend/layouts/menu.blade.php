@@ -46,6 +46,26 @@
           <div data-i18n="Dashboard">Dashboard</div>
         </a>
       </li>
+
+      <li class="menu-item">
+        <a href="javascript:void(0);" class="menu-link menu-toggle">
+          <i class="menu-icon tf-icons ri-news-line"></i>
+          <div data-i18n="Blogs">Blogs</div>
+        </a>
+        <ul class="menu-sub">
+          <li class="menu-item {{ request()->is('categorietag') ? 'active' : ''}}">
+            <a href="{{route('categorietag.index')}}" class="menu-link">
+              <div data-i18n="Categorie & Tag">Categorie & Tag</div>
+            </a>
+          </li>
+
+          <li class="menu-item {{ request()->is('articles') ? 'active' : ''}}">
+            <a href="{{route('articles.index')}}" class="menu-link">
+              <div data-i18n="Articles">Articles</div>
+            </a>
+          </li>
+        </ul>
+      </li>
       <li class="menu-item {{ request()->is('projects') ? 'active' : ''}}">
         <a href="{{route('projects.index')}}" class="menu-link">
           <i class="menu-icon tf-icons ri-list-check-3"></i>

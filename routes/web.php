@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CategorieTagController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
@@ -44,6 +46,12 @@ Route::middleware('auth')->group(function () {
     Route::resource('experiences', ExperienceController::class);
 
     Route::resource('educations', EducationController::class);
+
+    Route::resource('categorietag', CategorieTagController::class);
+
+    Route::resource('articles', ArticleController::class);
+
+    Route::resource('categories', ArticleController::class);
 });
 
 require __DIR__.'/auth.php';
