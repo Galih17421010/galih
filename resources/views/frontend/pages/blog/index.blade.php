@@ -29,7 +29,7 @@
               </svg>
               <h5 class="my-3">Getting Started</h5>
               <p class="mb-3"> Whether you're new or you're a power user, this article will… </p>
-              <a class="btn btn-outline-primary" href="{{route('blog.read')}}">Read More</a>
+              <a class="btn btn-outline-primary" href="">Read More</a>
             </div>
           </div>
         </div>
@@ -47,7 +47,7 @@
               </svg>
               <h5 class="my-3">First Steps</h5>
               <p class="mb-3">inspiration from experts to help you start and grow your big ideas.</p>
-              <a class="btn btn-outline-primary" href="{{route('blog.read')}}">Read More</a>
+              <a class="btn btn-outline-primary" href="">Read More</a>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@
               </svg>
               <h5 class="my-3">Add External Content</h5>
               <p class="mb-3"> This article will show you how to expand the functionality of... </p>
-              <a class="btn btn-outline-primary" href="{{route('blog.read')}}">Read More</a>
+              <a class="btn btn-outline-primary" href="">Read More</a>
             </div>
           </div>
         </div>
@@ -90,7 +90,7 @@
               </div>
               <ul class="list-unstyled my-6">
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       What are Favourites?
                     </span>
@@ -98,7 +98,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       How do I purchase an item?
                     </span>
@@ -106,7 +106,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       How do i add or change my details?
                     </span>
@@ -114,7 +114,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       How do refunds work?
                     </span>
@@ -122,7 +122,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       Can I Get A Refund?
                     </span>
@@ -130,7 +130,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       I'm trying to find a specific item
                     </span>
@@ -139,7 +139,7 @@
                 </li>
               </ul>
               <p class="mb-0 fw-medium mt-6">
-                <a href="{{route('blog.read')}}" class="d-flex align-items-center">
+                <a href="" class="d-flex align-items-center">
                   <span class="me-2">See all 10 articles</span>
                   <i class="tf-icons ri-arrow-right-line scaleX-n1-rtl"></i>
                 </a>
@@ -158,7 +158,7 @@
               </div>
               <ul class="list-unstyled my-6">
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       What is Item Support?
                     </span>
@@ -166,7 +166,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       How to contact an author
                     </span>
@@ -174,7 +174,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       Where Is My Purchase Code?
                     </span>
@@ -182,7 +182,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       Extend or renew Item Support
                     </span>
@@ -190,7 +190,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       Item Support FAQ
                     </span>
@@ -198,7 +198,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       Why has my item been removed?
                     </span>
@@ -207,7 +207,7 @@
                 </li>
               </ul>
               <p class="mb-0 fw-medium mt-6">
-                <a href="{{route('blog.read')}}" class="d-flex align-items-center">
+                <a href="" class="d-flex align-items-center">
                   <span class="me-2">See all 14 articles</span>
                   <i class="tf-icons ri-arrow-right-line scaleX-n1-rtl"></i>
                 </a>
@@ -226,7 +226,7 @@
               </div>
               <ul class="list-unstyled my-6">
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       Can I use the same license for the same item on multiple sites?
                     </span>
@@ -234,7 +234,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       How do licenses work for any plugins
                     </span>
@@ -242,7 +242,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       For logo what license do I need?
                     </span>
@@ -250,7 +250,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       I’m making a test site - it’s not for a client. Which license do I need?
                     </span>
@@ -258,7 +258,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       which license do I need?
                     </span>
@@ -266,7 +266,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       I want to make multiple end products
                     </span>
@@ -275,7 +275,7 @@
                 </li>
               </ul>
               <p class="mb-0 fw-medium mt-6">
-                <a href="{{route('blog.read')}}" class="d-flex align-items-center">
+                <a href="" class="d-flex align-items-center">
                   <span class="me-2">See all 8 articles</span>
                   <i class="tf-icons ri-arrow-right-line scaleX-n1-rtl"></i>
                 </a>
@@ -294,7 +294,7 @@
               </div>
               <ul class="list-unstyled my-6">
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       Template Kits
                     </span>
@@ -302,7 +302,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       Elementor Template Kits: PHP Zip File Missing
                     </span>
@@ -310,7 +310,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       Template Kits - Imported template is blank or broken
                     </span>
@@ -318,7 +318,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       Troubleshooting Import Problems
                     </span>
@@ -326,7 +326,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       How to use the WordPress Plugin
                     </span>
@@ -334,7 +334,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       How to use the Template Kit Importer Plugin
                     </span>
@@ -343,7 +343,7 @@
                 </li>
               </ul>
               <p class="mb-0 fw-medium mt-6">
-                <a href="{{route('blog.read')}}" class="d-flex align-items-center">
+                <a href="" class="d-flex align-items-center">
                   <span class="me-2">See all 5 articles</span>
                   <i class="tf-icons ri-arrow-right-line scaleX-n1-rtl"></i>
                 </a>
@@ -362,7 +362,7 @@
               </div>
               <ul class="list-unstyled my-6">
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       Signing in with a social account
                     </span>
@@ -370,7 +370,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       Locked Out of Account
                     </span>
@@ -378,7 +378,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       I'm not receiving the verification email
                     </span>
@@ -386,7 +386,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       Forgotten Username Or Password
                     </span>
@@ -394,7 +394,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       New password not accepted
                     </span>
@@ -402,7 +402,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       What is Sign In Verification?
                     </span>
@@ -411,7 +411,7 @@
                 </li>
               </ul>
               <p class="mb-0 fw-medium mt-6">
-                <a href="{{route('blog.read')}}" class="d-flex align-items-center">
+                <a href="" class="d-flex align-items-center">
                   <span class="me-2">See all 16 articles</span>
                   <i class="tf-icons ri-arrow-right-line scaleX-n1-rtl"></i>
                 </a>
@@ -430,7 +430,7 @@
               </div>
               <ul class="list-unstyled my-6">
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       How do I change my password?
                     </span>
@@ -438,7 +438,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       How do I change my username?
                     </span>
@@ -446,7 +446,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       How do I close my account?
                     </span>
@@ -454,7 +454,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       How do I change my email address?
                     </span>
@@ -462,7 +462,7 @@
                   </a>
                 </li>
                 <li class="mb-2">
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       How can I regain access to my account?
                     </span>
@@ -470,7 +470,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="{{route('blog.read')}}" class="text-heading d-flex justify-content-between align-items-center">
+                  <a href="" class="text-heading d-flex justify-content-between align-items-center">
                     <span class="text-truncate me-1">
                       Are RSS feeds available on Market?
                     </span>
@@ -479,7 +479,7 @@
                 </li>
               </ul>
               <p class="mb-0 fw-medium mt-6">
-                <a href="{{route('blog.read')}}" class="d-flex align-items-center">
+                <a href="" class="d-flex align-items-center">
                   <span class="me-2">See all 12 articles</span>
                   <i class="tf-icons ri-arrow-right-line scaleX-n1-rtl"></i>
                 </a>
@@ -510,7 +510,7 @@
               </svg>
               <h5 class="my-3">Blogging</h5>
               <p class="mb-3">Expert tips and tools to improve your website or online store using our blog.</p>
-              <a href="{{route('blog.read')}}" class="btn btn-outline-primary">Read More</a>
+              <a href="" class="btn btn-outline-primary">Read More</a>
             </div>
           </div>
         </div>
@@ -527,7 +527,7 @@
               </svg>
               <h5 class="my-3">Inspiration Center</h5>
               <p class="mb-3">Inspiration from experts to help you start and grow your big ideas.</p>
-              <a href="{{route('blog.read')}}" class="btn btn-outline-primary">Read More</a>
+              <a href="" class="btn btn-outline-primary">Read More</a>
             </div>
           </div>
         </div>
@@ -541,7 +541,7 @@
               </svg>
               <h5 class="my-3">Community</h5>
               <p class="mb-3">A group of people living in the same place or having a particular.</p>
-              <a href="{{route('blog.read')}}" class="btn btn-outline-primary">Read More</a>
+              <a href="" class="btn btn-outline-primary">Read More</a>
             </div>
           </div>
         </div>

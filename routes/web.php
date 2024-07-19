@@ -24,7 +24,6 @@ Route::resource('resume', ResumeController::class);
 Route::resource('contact', ContactController::class);
 
 Route::resource('blog', BlogController::class);
-Route::get('/blog/article', [BlogController::class, 'show'])->name('blog.read');
 
 Route::get('/dashboard', function () {
     return view('backend.pages.dashboard.index');

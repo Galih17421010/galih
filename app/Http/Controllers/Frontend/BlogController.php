@@ -18,7 +18,7 @@ class BlogController extends Controller
         //
     }
 
-    public function show(string $id)
+    public function show($id)
     {
         return view('frontend.pages.blog.read');
     }

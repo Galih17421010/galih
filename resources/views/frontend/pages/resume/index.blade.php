@@ -12,7 +12,8 @@
         <h5 class="text-center mb-2"><span class="h4 fw-bold">Lets work</span> together</h5>
         <p class="text-center fw-medium mb-4 mb-md-12 pb-3">Any question or remark? just write us a message</p>
         <div class="row gy-4">
-          <div class="col-lg-12">
+            <div class="col-lg-1"></div>
+          <div class="col-lg-10">
             <div class="card">
               <div class="card-body">
                 <h5 class="mb-6 text-center">Galih Agus Saputra</h5>
