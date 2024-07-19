@@ -1,17 +1,30 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\Frontend\BlogController;
+use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\ResumeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
+Route::resource('/', HomeController::class);
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+Route::resource('project', \App\Http\Controllers\Frontend\ProjectController::class);
+
+Route::resource('experience', \App\Http\Controllers\Frontend\ExperienceController::class );
+
+Route::resource('resume', ResumeController::class);
+
+Route::resource('contact', ContactController::class);
+
+Route::resource('blog', BlogController::class);
+Route::get('/blog/article', [BlogController::class, 'show'])->name('blog.read');
 
 Route::get('/dashboard', function () {
     return view('backend.pages.dashboard.index');

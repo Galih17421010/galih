@@ -1,5 +1,5 @@
 <!-- Useful features: Start -->
-<section id="landingFeatures" class="section-py landing-features position-relative">
+<section id="landingFeatures" class="section-py landing-hero position-relative">
     <div class="container">
       <h6 class="text-center d-flex justify-content-center align-items-center mb-6">
         <img src={{asset("assets/img/section-tilte-icon.png")}} alt="section title icon" class="me-2" height="19" />

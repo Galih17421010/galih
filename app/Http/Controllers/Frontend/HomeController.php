@@ -1,14 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class HomeController extends Controller
 {
     public function index()
     {
-        return view('backend.pages.dashboard.index');
+        return view('frontend.pages.home.index');
     }
 
     public function create()

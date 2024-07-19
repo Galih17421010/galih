@@ -1,19 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Frontend;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class BlogController extends Controller
 {
+
     public function index()
     {
-        return view('backend.pages.dashboard.index');
-    }
-
-    public function create()
-    {
-        //
+        return view('frontend.pages.blog.index');
     }
 
     public function store(Request $request)
@@ -23,7 +20,7 @@ class DashboardController extends Controller
 
     public function show(string $id)
     {
-        //
+        return view('frontend.pages.blog.read');
     }
 
     public function edit(string $id)
@@ -35,6 +32,7 @@ class DashboardController extends Controller
     {
         //
     }
+
 
     public function destroy(string $id)
     {

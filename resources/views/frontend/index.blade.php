@@ -7,7 +7,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Landing Page | Portfolio Galih</title>
+    <title>@yield('title') | Portfolio Galih</title>
 
     <meta name="description" content="Start your development with a Dashboard for Bootstrap 5" />
     <meta name="keywords" content="dashboard, material, material design, bootstrap 5 dashboard, bootstrap 5 design, bootstrap 5" />
@@ -39,15 +39,7 @@
     <!-- Sections:Start -->
 
     <div data-bs-spy="scroll" class="scrollspy-example">
-        @include('frontend.pages.home')
-
-        @include('frontend.pages.feature')
-
-        @include('frontend.pages.team')
-
-        @include('frontend.pages.FAQ')
-
-        @include('frontend.pages.contact')
+        @yield('content')
     </div>
 
     <!-- / Sections:End -->

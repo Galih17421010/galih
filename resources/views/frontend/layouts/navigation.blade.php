@@ -39,23 +39,23 @@
           <i class="tf-icons ri-close-fill"></i>
         </button>
         <ul class="navbar-nav me-auto p-4 p-lg-0">
-          <li class="nav-item">
-            <a class="nav-link fw-medium" aria-current="page" href="#home">Home</a>
+          <li class="nav-item {{ request()->is('/') ? 'active' : ''}}">
+            <a class="nav-link fw-medium" aria-current="page" href="/">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link fw-medium" href="#landingFeatures">Features</a>
+          <li class="nav-item {{ request()->is('project') ? 'active' : ''}}">
+            <a class="nav-link fw-medium" href="{{route('project.index')}}">Projects</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link fw-medium" href="#landingTeam">Team</a>
+          <li class="nav-item {{ request()->is('experience') ? 'active' : ''}}">
+            <a class="nav-link fw-medium" href="{{route('experience.index')}}">Experience</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link fw-medium" href="#landingFAQ">FAQ</a>
+          <li class="nav-item {{ request()->is('resume') ? 'active' : ''}}">
+            <a class="nav-link fw-medium" href="{{route('resume.index')}}">Resume</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link fw-medium text-nowrap" href="#landingContact">Contact us</a>
+          <li class="nav-item {{ request()->is('contact') ? 'active' : ''}}">
+            <a class="nav-link fw-medium" href="{{route('contact.index')}}">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link fw-medium" href="/">Admin</a>
+          <li class="nav-item {{ request()->is('blog') ? 'active' : ''}}">
+            <a class="nav-link fw-medium" href="{{route('blog.index')}}">Blog</a>
           </li>
         </ul>
       </div>
