@@ -125,6 +125,8 @@
               'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
           }
         });
+
+        // Table Categorie
         $(document).ready(function(){
             let table = $('#table-categorie').DataTable({
                 processing: true,
@@ -229,6 +231,7 @@
             });
         });
 
+        // Table Tag
         $(document).ready(function(){
             let table = $('#table-tag').DataTable({
                 processing: true,
