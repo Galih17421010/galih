@@ -58,7 +58,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('tags', TagController::class);
 
     Route::resource('articles', ArticleController::class);
-    Route::get('articles/create', [ArticleController::class, 'create'])->name('article.create');
 });
 
 require __DIR__.'/auth.php';

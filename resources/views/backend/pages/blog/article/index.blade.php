@@ -4,7 +4,7 @@
 <div class="card">
     <div class="card-header">
         <h5 class="card-header text-center">List Data Article</h5>
-        <a href="{{route('article.create')}}" class="btn btn-primary">Add Article</a>
+        <a href="{{route('articles.create')}}" class="btn btn-primary">Add Article</a>
     </div>
     <div class="card-datatable table-responsive pt-0">
       <table class="table table-bordered" id="table-article">
