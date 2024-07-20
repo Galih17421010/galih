@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Categorie;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 
@@ -26,4 +27,26 @@ class CategorieController extends Controller
         return view('backend.pages.blog.categorietag.index');
     }
 
+    public function store(Request $request): JsonResponse
+    {
+        Categorie::updateOrCreate(['id'=> $request->id],[
+            'name' => $request->name,
+            'slug' => $request->slug
+        ]);
+
+        return response()->json(['success' => true, 'message' => 'Your Categorie has been saved']);
+    }
+
+    public function edit($id): JsonResponse
+    {
+        $categorie = Categorie::find($id);
+        return response()->json($categorie);
+    }
+
+    public function destroy($id): JsonResponse
+    {
+        Categorie::find($id)->delete();
+
+        return response()->json(['success'=> true, 'message' => 'Categorie deleted successfully.']);
+    }
 }

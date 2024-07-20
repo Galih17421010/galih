@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\CategorieTagController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\EducationController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\Frontend\ResumeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\SkillController;
+use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -51,7 +53,9 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('articles', ArticleController::class);
 
-    Route::resource('categories', ArticleController::class);
+    Route::resource('categories', CategorieController::class);
+
+    Route::resource('tags', TagController::class);
 });
 
 require __DIR__.'/auth.php';

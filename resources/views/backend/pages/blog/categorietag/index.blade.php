@@ -7,7 +7,7 @@
     <div class="card">
         <div class="card-header border-bottom">
             <h6 class="card-title mb-0 text-center">Data Categories</h6>
-            <a href="javascript:void(0)" class="btn btn-primary" id="createProject">Add Categorie</a>
+            <a href="javascript:void(0)" class="btn btn-primary" id="createCategorie">Add Categorie</a>
         </div>
         <div class="card-datatable table-responsive">
           <table class="datatables-project table" id="table-categorie">
@@ -23,14 +23,50 @@
         </div>
     </div>
 </div>
+
+<!-- Add Categorie Modal -->
+<div class="modal fade" id="addNewCategorie" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered1 modal-simple modal-add-new-address">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="text-center mb-6">
+            <h4 class="address-title mb-2" id="judulModal"></h4>
+            <p class="address-subtitle" id="deskripsiModal"></p>
+          </div>
+          <form id="categorieForm" class="row g-5" name="categorieForm">
+            <input type="hidden" name="id" id="id"> @csrf
+            <div class="col-12">
+              <div class="form-floating form-floating-outline">
+                <input type="text" oninput="listingslug(this.value)" id="name" name="name" class="form-control" required />
+                <label for="name">Name</label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-floating form-floating-outline">
+                <input type="text" id="slug" name="slug" class="form-control" required />
+                <label for="slug">Slug</label>
+              </div>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary me-3" id="simpan" value="create">Submit</button>
+              <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!--/ Add Categorie Modal -->
+
 <div class="col-lg-6">
     <div class="card">
         <div class="card-header border-bottom">
             <h6 class="card-title mb-0 text-center">Data Tags</h6>
-            <a href="javascript:void(0)" class="btn btn-primary" id="createProject">Add Tag</a>
+            <a href="javascript:void(0)" class="btn btn-primary" id="createTag">Add Tag</a>
         </div>
         <div class="card-datatable table-responsive">
-          <table class="datatables-project table" id="table-project">
+          <table class="datatables-project table" id="table-tag">
             <thead>
               <tr>
                 <th></th>
@@ -80,10 +116,10 @@
             $('body').on('click', '.editBtn', function () {
                 var id = $(this).data('id');
                 $.get("{{ route('categories.index') }}" +'/' + id +'/edit', function (data) {
-                    $('#judulModal').html("Edit Project");
-                    $('#deskripsiModal').html("Edit project for Portfolio ");
-                    $('#simpan').val("edit-project");
-                    $('#addNewProject').modal('show');
+                    $('#judulModal').html("Edit Categorie");
+                    $('#deskripsiModal').html("Edit Categorie for Portfolio ");
+                    $('#simpan').val("edit-categorie");
+                    $('#addNewCategorie').modal('show');
                     $('#id').val(data.id);
                     $('#name').val(data.name);
                     $('#slug').val(data.slug);
@@ -91,7 +127,7 @@
             });
 
 
-            $('#projectForm').submit(function(e) {
+            $('#categorieForm').submit(function(e) {
             e.preventDefault();
             let formData = new FormData(this);
                 $('#simpan').html('Sending...');
@@ -103,8 +139,8 @@
                         processData: false,
                         success: (response) => {
                             $('#simpan').html('Submit');
-                            $('#projectForm').trigger("reset");
-                            $('#addNewProject').modal('hide');
+                            $('#categorieForm').trigger("reset");
+                            $('#addNewCategorie').modal('hide');
                             Swal.fire({
                                 title: "Success",
                                 text: `${response.message}`,
@@ -116,10 +152,10 @@
                         },
                         error: function(response){
                             $('#simpan').html('Submit');
-                            $('#projectForm').find(".print-error-msg").find("ul").html('');
-                            $('#projectForm').find(".print-error-msg").css('display','block');
+                            $('#categorieForm').find(".print-error-msg").find("ul").html('');
+                            $('#categorieForm').find(".print-error-msg").css('display','block');
                             $.each( response.responseJSON.errors, function( key, value ) {
-                                $('#projectForm').find(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+                                $('#categorieForm').find(".print-error-msg").find("ul").append('<li>'+value+'</li>');
                             });
                         }
                 });
@@ -159,5 +195,19 @@
             });
         });
     });
+    function slugify(text) {
+        return text
+            .toString()
+            .toLowerCase()
+            .normalize('NFD')
+            .trim()
+            .replace(/\s+/g, '-')
+            .replace(/[^\w\-]+/g, '')
+            .replace(/\-\-+/g, '-');
+        }
+
+        function listingslug(text) {
+            document.getElementById("slug").value = slugify(text);
+        }
 </script>
 @endsection
