@@ -81,6 +81,40 @@
 </div>
 </div>
 
+<!-- Add Tag Modal -->
+<div class="modal fade" id="addNewTag" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered1 modal-simple modal-add-new-address">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="text-center mb-6">
+            <h4 class="address-title mb-2" id="judulModalTag"></h4>
+            <p class="address-subtitle" id="deskripsiModalTag"></p>
+          </div>
+          <form id="tagForm" class="row g-5" name="tagForm">
+            <input type="hidden" name="idtag" id="idtag"> @csrf
+            <div class="col-12">
+              <div class="form-floating form-floating-outline">
+                <input type="text" oninput="listingslugtag(this.value)" id="nametag" name="nametag" class="form-control" required />
+                <label for="name">Name</label>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-floating form-floating-outline">
+                <input type="text" id="slugtag" name="slugtag" class="form-control" required />
+                <label for="slug">Slug</label>
+              </div>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" class="btn btn-primary me-3" id="simpan" value="create">Submit</button>
+              <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+<!--/ Add Tag Modal -->
 
 @endsection
 @section('script')
@@ -194,6 +228,110 @@
                 });
             });
         });
+
+        $(document).ready(function(){
+            let table = $('#table-tag').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('tags.index') }}",
+                columns: [
+                    {data: 'id', name: 'id'},
+                    {data: 'name', name: 'name'},
+                    {data: 'slug', name: 'slug'},
+                    {data: 'action', name: 'action', orderable: false, searchable: false},
+                ]
+            });
+
+            $('#createTag').click(function () {
+                $('#simpan').val("create-tag");
+                $('#id').val('');
+                $('#tagForm').trigger("reset");
+                $('#judulModalTag').html("Create New Tag");
+                $('#deskripsiModalTag').html("Add new Tag for Portfolio ");
+                $('#addNewTag').modal('show');
+            });
+
+            $('body').on('click', '.editBtnTag', function () {
+                var id = $(this).data('id');
+                $.get("{{ route('tags.index') }}" +'/' + id +'/edit', function (data) {
+                    $('#judulModalTag').html("Edit Tag");
+                    $('#deskripsiModalTag').html("Edit Tag for Portfolio ");
+                    $('#simpan').val("edit-tag");
+                    $('#addNewTag').modal('show');
+                    $('#idtag').val(data.id);
+                    $('#nametag').val(data.name);
+                    $('#slugtag').val(data.slug);
+                })
+            });
+
+
+            $('#tagForm').submit(function(e) {
+            e.preventDefault();
+            let formData = new FormData(this);
+                $('#simpan').html('Sending...');
+                    $.ajax({
+                        type:'POST',
+                        url: "{{ route('tags.store') }}",
+                        data: formData,
+                        contentType: false,
+                        processData: false,
+                        success: (response) => {
+                            $('#simpan').html('Submit');
+                            $('#tagForm').trigger("reset");
+                            $('#addNewTag').modal('hide');
+                            Swal.fire({
+                                title: "Success",
+                                text: `${response.message}`,
+                                icon: "success",
+                                customClass: { confirmButton: "btn btn-success" },
+                                buttonsStyling: !1,
+                            });
+                            table.draw();
+                        },
+                        error: function(response){
+                            $('#simpan').html('Submit');
+                            $('#tagForm').find(".print-error-msg").find("ul").html('');
+                            $('#tagForm').find(".print-error-msg").css('display','block');
+                            $.each( response.responseJSON.errors, function( key, value ) {
+                                $('#tagForm').find(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+                            });
+                        }
+                });
+
+            });
+
+            $('body').on('click', '.deleteBtnTag', function () {
+                var id = $(this).data("id");
+                Swal.fire({
+                    title: "Are you sure?",
+                    text: "You won't be able to revert this!",
+                    icon: "warning",
+                    showCancelButton: true,
+                    confirmButtonText: "Yes, deleted",
+                    customClass: {
+                        confirmButton: "btn btn-primary me-3",
+                        cancelButton: "btn btn-label-secondary",
+                    }
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        $.ajax({
+                            url: "{{route('tags.store')}}"+"/"+id,
+                            type: "DELETE",
+                            data: {id},
+                            success: function(response) {
+                                Swal.fire({
+                                    title: "Deleted!",
+                                    text: `${response.message}`,
+                                    icon: "success",
+                                    customClass: { confirmButton: "btn btn-success" },
+                                });
+                                table.draw();
+                            }
+                        });
+                    }
+                });
+            });
+        });
     });
     function slugify(text) {
         return text
@@ -208,6 +346,9 @@
 
         function listingslug(text) {
             document.getElementById("slug").value = slugify(text);
+        }
+        function listingslugtag(text) {
+            document.getElementById("slugtag").value = slugify(text);
         }
 </script>
 @endsection
