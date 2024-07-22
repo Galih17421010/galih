@@ -29,6 +29,7 @@
     <!-- End Google Tag Manager -->
 
     @include('backend.layouts.head')
+    @yield('css')
   </head>
 
   <body>
