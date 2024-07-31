@@ -39,6 +39,7 @@
           <i class="tf-icons ri-close-fill"></i>
         </button>
         <ul class="navbar-nav me-auto p-4 p-lg-0">
+            <li class="nav-item"></li>
           <li class="nav-item {{ request()->is('/') ? 'active' : ''}}">
             <a class="nav-link fw-medium" aria-current="page" href="/">Home</a>
           </li>
